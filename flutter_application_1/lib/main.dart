@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter App"),
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         // margin: EdgeInsets.all(10),
