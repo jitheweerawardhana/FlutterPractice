@@ -118,3 +118,19 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+// body: SizedBox(
+//         height:
+//             150, // Make sure there's vertical space for horizontal scrolling
+//         child: ListView(
+//           scrollDirection: Axis.horizontal,
+//           children: <Widget>[
+//             Container(width: 100, color: Colors.white),
+//             Container(width: 100, color: Colors.grey),
+//             Container(width: 100, color: Colors.orange),
+//             Container(width: 100, color: Color.fromARGB(255, 218, 23, 23)),
+//             Container(width: 100, color: Color.fromARGB(255, 5, 190, 30)),
+//             Container(width: 100, color: Color.fromARGB(255, 24, 159, 238)),
+//           ],
+//         ),
+//       ),
