@@ -9,14 +9,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int counter = 0; // ✅ fixed spelling
+  // int counter = 0; // ✅ fixed spelling
 
-  void incrementCounter() {
-    setState(() {
-      counter++;
-      print(counter);
-    }); // ✅ fixed spelling
-  }
+  // void incrementCounter() {
+  //   setState(() {
+  //     counter++;
+  //     print(counter);
+  //   }); // ✅ fixed spelling
+  // }
 
   var items = List<String>.generate(100, (index)=> "Done $index");
 
@@ -30,17 +30,36 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(items[index]),
-          );
-        },
-      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                maxLength: 10,
+                obscureText: false,//use this for password
+                // keyboardType: TextInputType.number, //use this for number
+                style: TextStyle(
+                  fontSize: 20,
+                  color: const Color.fromARGB(255, 60, 255, 0),
+                ),
+              ),
+            ),
+          ],
+        )),
     );
   }
 }
+
+// body: ListView.builder(
+//         itemCount: items.length,
+//         itemBuilder: (context, index) {
+//           return ListTile(
+//             title: Text(items[index]),
+//           );
+//         },
+//       ),
+
 // child: ListView(
 //           scrollDirection: Axis.horizontal,
 //           children: <Widget>[
